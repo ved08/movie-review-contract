@@ -75,7 +75,7 @@ pub fn process_instructions(
     let instruction = MovieInstruction::unpack(instruction_data)?;
     match instruction {
         MovieInstruction::AddMovieReview { title, rating, description } => {
-            // add_movie_review(program_id, accounts, title, description, rating)
+            add_movie_review(program_id, accounts, title, description, rating)
             msg!("Title: {}", title);
             msg!("Description: {}", description);
             msg!("Rating: {}", rating);
